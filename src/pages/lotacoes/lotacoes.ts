@@ -25,9 +25,7 @@ export class LotacoesPage {
     .subscribe(response => { 
     this.items = response;
     },
-    error => {
-      console.log(error);
-    });
+    error => {});
   }
 
 

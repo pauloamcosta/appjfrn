@@ -8,6 +8,9 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LotacaoService } from '../services/domain/lotacao.service';
+import { ErrorInterceptorProvider } from '../interceptors/error.interceptor';
+import { AuthService } from '../services/domain/auth.service';
+import { StorageService } from '../services/storage.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { LotacaoService } from '../services/domain/lotacao.service';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LotacaoService
+    LotacaoService,
+    ErrorInterceptorProvider,
+    AuthService,
+    StorageService
   ]
 })
 export class AppModule {}

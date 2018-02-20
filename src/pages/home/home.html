@@ -2,17 +2,17 @@
 <ion-content padding>
   
   <img src="assets/imgs/logojfrnapp.png" alt="logo">
-<form>
-  <ion-item>
-    <ion-label stacked>Usuário</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label stacked>Senha</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
-  <button ion-button block (click)="login()">Entrar</button>
-</form>
+  <form>
+      <ion-item>
+        <ion-label stacked>Usuário</ion-label>
+        <ion-input [(ngModel)]="creds.login" name="login" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Senha</ion-label>
+        <ion-input [(ngModel)]="creds.senha" name="senha" type="password"></ion-input>
+      </ion-item>
+      <button ion-button block (click)="login()">Entrar</button>
+    </form>
 <button ion-button block outline>Registrar</button>
 
 </ion-content>
